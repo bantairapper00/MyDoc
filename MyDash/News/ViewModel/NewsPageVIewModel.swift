@@ -7,25 +7,61 @@
 
 import Foundation
 
+
 class NewsPageVIewModel: ObservableObject {
+    
+    enum State {
+        case isloading
+        case loaded
+        case error(String)
+    }
     
     let networkManager = NetworkManager()
     @Published var articles: [Article] = []
+    @Published var state: State = .isloading
     
-    func fetchNewsArticles() async throws {
-        if let url = URL(string: "https://newsapi.org/v2/everything?q=tesla&from=2024-12-18&sortBy=publishedAt&apiKey=7b8ecda91d8b4619a5a0ce2da13c92c8") {
-            let resource = Resource<NewsResult>(
-                url: url,
-                method: .get([])
-            )
+    @MainActor
+    func fetchNewsArticles(category: String, language: String) async {
+        self.state = .isloading
+
+        guard let url = URL(string: "https://newsapi.org/v2/everything?q=\(category)&sortBy=publishedAt&language=\(language)&apiKey=b0a3cd1716c54765bad0929866de5428") else {
+            self.state = .error("Invalid URL")
+            return
+        }
+
+        let resource = Resource<NewsResult>(
+            url: url,
+            method: .get([])
+        )
+
+        do {
             let result = try await networkManager.load(resource: resource)
             if let newsArticles = result.articles {
-                DispatchQueue.main.async {
-                    self.articles = newsArticles
-                }
+                self.articles = newsArticles
+                self.state = .loaded
+            } else {
+                self.state = .error("No articles found in the response.")
             }
+        } catch {
+            self.state = .error("Error fetching news articles: \n\(error.localizedDescription)")
         }
     }
+    
+    
+//    func loadJSON() {
+//        guard let url = Bundle.main.url(forResource: "Data", withExtension: "json") else {
+//            print("Failed to locate filename) in bundle.")
+//            return
+//        }
+//        do {
+//            let data = try Data(contentsOf: url)
+//            let decodedData = try JSONDecoder().decode(NewsResult.self, from: data)
+//            articles = decodedData.articles!
+//        } catch {
+//            print("Failed to decode filename): \(error)")
+//        }
+//    }
+    
     func relativeDateString(from dateString: String) -> String {
         // Initialize an ISO8601DateFormatter to parse the string
         let isoFormatter = ISO8601DateFormatter()

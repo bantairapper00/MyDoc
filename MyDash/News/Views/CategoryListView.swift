@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct CategoryListView: View {
+    @Binding var selectedCategory: String
     var body: some View {
         VStack {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 2) {
                     ForEach(Categories.allCases, id: \.self) { category in
-                        Text(category.text)
+                        Text(category.rawValue)
                             .font(.headline)
                             .padding()
                             .frame(height: 40)
@@ -22,17 +23,17 @@ struct CategoryListView: View {
                             .cornerRadius(15)
                             .padding(.horizontal, 5)
                             .onTapGesture {
-                                
+                                selectedCategory = category.rawValue
                             }
                     }
+                    .frame(height: 60)
                 }
-                .frame(height: 60)
+                
             }
-            
         }
     }
 }
 
 #Preview {
-    CategoryListView()
+    CategoryListView(selectedCategory: .constant("general"))
 }

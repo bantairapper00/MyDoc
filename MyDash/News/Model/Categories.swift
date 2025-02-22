@@ -15,11 +15,4 @@ enum Categories: String, CaseIterable {
     case science
     case sports
     case technology
-    
-    var text: String {
-        if self == .general {
-            return "Top Headlines"
-        }
-        return rawValue.capitalized
-    }
 }

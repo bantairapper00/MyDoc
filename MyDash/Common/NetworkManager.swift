@@ -78,34 +78,30 @@ class NetworkManager {
         }
         // Set HTTP method and configure the request
         request.httpMethod = resource.method.name
-//        resource.method.configure(request: &request)
+        //        resource.method.configure(request: &request)
         
         // Creating a network session for performing HTTP requests
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = ["Content-Type": "application/json"]
         let session = URLSession(configuration: configuration)
         
+        // Perform the network call
+        let (data, response) = try await session.data(for: request)
+        
+        // Validate the response
+        guard let httpResponse = response as? HTTPURLResponse else {
+            throw NetworkError.invalidResponse(0)
+        }
+        guard 200...299 ~= httpResponse.statusCode else {
+            throw NetworkError.invalidResponse(httpResponse.statusCode)
+        }
+        
+        // Decode the response
         do {
-            // Perform the network call
-            let (data, response) = try await session.data(for: request)
-            
-            // Validate the response
-            guard let httpResponse = response as? HTTPURLResponse else {
-                throw NetworkError.invalidResponse(0)
-            }
-            guard 200...299 ~= httpResponse.statusCode else {
-                throw NetworkError.invalidResponse(httpResponse.statusCode)
-            }
-            
-            // Decode the response
-            do {
-                let result = try JSONDecoder().decode(T.self, from: data)
-                return result
-            } catch {
-                throw NetworkError.decodingError(error)
-            }
+            let result = try JSONDecoder().decode(T.self, from: data)
+            return result
         } catch {
-            throw NetworkError.unknownError(error)
+            throw NetworkError.decodingError(error)
         }
     }
 }
