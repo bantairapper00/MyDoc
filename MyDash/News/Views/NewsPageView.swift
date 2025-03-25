@@ -10,7 +10,7 @@ import UIKit
 
 struct NewsPageView: View {
     
-    @ObservedObject var viewModel: NewsPageVIewModel
+    @StateObject var viewModel: NewsPageVIewModel
     @State private var selectedArticle: Article?
     @State var selectedCategory: String = "general"
     @State private var isShowingAlert = false
@@ -52,8 +52,8 @@ struct NewsPageView: View {
                                 .edgesIgnoringSafeArea(.bottom)
                         }
                         
-                    }
-                   
+                    }   
+                    
                 case .error(let error):
                     VStack(alignment: .center, spacing: 40) {
                         Spacer()
@@ -86,11 +86,11 @@ struct NewsPageView: View {
         }
         .onAppear {
             let appearance = UINavigationBarAppearance()
-                appearance.configureWithOpaqueBackground() // Use opaque background for solid color
-                appearance.backgroundColor = UIColor.white // Set the solid background color
-                appearance.titleTextAttributes = [.foregroundColor: UIColor.black] // Optional: Set title text color
-                UINavigationBar.appearance().standardAppearance = appearance
-                UINavigationBar.appearance().scrollEdgeAppearance = appearance
+            appearance.configureWithOpaqueBackground() // Use opaque background for solid color
+            appearance.backgroundColor = UIColor.white // Set the solid background color
+            appearance.titleTextAttributes = [.foregroundColor: UIColor.black] // Optional: Set title text color
+            UINavigationBar.appearance().standardAppearance = appearance
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
         }
     }
 }

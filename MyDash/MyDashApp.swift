@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct MyDashApp: App {
+    @StateObject var appState = AppState()
     var body: some Scene {
         WindowGroup {
             TabBarView()
+                .environmentObject(appState)
         }
     }
 }

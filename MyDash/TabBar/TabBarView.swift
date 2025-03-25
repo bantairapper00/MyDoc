@@ -10,11 +10,12 @@ import SwiftUI
 struct TabBarView: View {
     
     @State private var selectedTab = TabsData.about.rawValue
+    @EnvironmentObject var appState: AppState
     
     var body: some View {
-        ZStack(alignment: .bottom) {
+        VStack(spacing: 0) {
             TabView (selection: $selectedTab) {
-                Text("About")
+                LoginView()
                     .tag(TabsData.about.rawValue)
                 Text("Document")
                     .tag(TabsData.document.rawValue)
@@ -25,21 +26,26 @@ struct TabBarView: View {
                 Text("Stock")
                     .tag(TabsData.stocks.rawValue)
             }
+            .padding(.bottom, -50)
             HStack() {
                 ForEach(TabsData.allCases, id: \.rawValue) { tabData in
                     TabItemView(tabData: tabData, tab: tabData.index, selectedTab: $selectedTab)
                 }
             }
-            .frame(height: 50)
+            .frame(height: appState.hideTabBar ? 0 : 50)
+            .opacity(appState.hideTabBar ? 0 : 1)
         }
-        .onAppear {
-            let tabBarAppearance = UITabBarAppearance()
-            tabBarAppearance.configureWithDefaultBackground()
-            UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
-        }
+//        .onAppear {
+//            let tabBarAppearance = UITabBarAppearance()
+////            tabBarAppearance.configureWithDefaultBackground()
+//            UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+//        }
+        .ignoresSafeArea(.keyboard, edges: .all)
+        
     }
 }
 
 #Preview {
     TabBarView()
+        .environmentObject(AppState())
 }
