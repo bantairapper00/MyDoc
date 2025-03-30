@@ -10,6 +10,8 @@ import SwiftUI
 struct LoginView: View {
     @State private var email: String = ""
     @State private var password: String = ""
+    @EnvironmentObject var viewModel: AuthViewModel
+    
     var body: some View {
         
         NavigationStack {
@@ -33,7 +35,9 @@ struct LoginView: View {
                     
                     // sign in button
                     Button {
-                        print("Log user in...")
+                        Task {
+                            try await viewModel.signIn(withEmail: email, password: password)
+                        }
                     } label: {
                         HStack {
                             Text("SIGN IN")
@@ -45,9 +49,8 @@ struct LoginView: View {
                     }
                     .background(Color.blue)
                     .cornerRadius(10)
-                    .padding(.top, 24)
-                    
-                    Spacer()
+                    .padding(.top, 2)
+                    .padding(.bottom, 30)
                     
                     // sign up button
                     NavigationLink {
@@ -62,6 +65,7 @@ struct LoginView: View {
                         .font(.system(size: 14))
                     }
                     
+                    Spacer()
                 }
                 .background(Color(red: 163/255, green: 162/255, blue: 158/255))
             }

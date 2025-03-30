@@ -11,13 +11,20 @@ struct TabBarView: View {
     
     @State private var selectedTab = TabsData.about.rawValue
     @EnvironmentObject var appState: AppState
+    @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
         VStack(spacing: 0) {
             TabView (selection: $selectedTab) {
-                LoginView()
+                Group {
+                    if viewModel.userSession != nil {
+                        ProfileView()
+                    } else {
+                        LoginView()
+                    }
+                }
                     .tag(TabsData.about.rawValue)
-                Text("Document")
+                DocumentView()
                     .tag(TabsData.document.rawValue)
                 NewsPageView(viewModel: NewsPageVIewModel())
                     .tag(TabsData.news.rawValue)

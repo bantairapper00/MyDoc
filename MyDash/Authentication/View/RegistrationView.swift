@@ -14,6 +14,8 @@ struct RegistrationView: View {
     @State private var password: String = ""
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject var appState: AppState
+    @EnvironmentObject var viewModel: AuthViewModel
+
     var body: some View {
         NavigationStack {
             VStack {
@@ -30,14 +32,15 @@ struct RegistrationView: View {
                     InputVIew(text: $name, title: "Full Name", placeholder: "Enter your name")
                     InputVIew(text: $password, title: "Password", placeholder: "Enter your password", isSecureTextEntry: true)
                     InputVIew(text: $confirmPassword, title: "Confirm password", placeholder: "Confirm your password", isSecureTextEntry: true)
-                    
                 }
                 .padding(.horizontal)
                 .padding(.top, 24)
                 
                 // sign in button
                 Button {
-                    print("Log user up...")
+                    Task {
+                        try await viewModel.createUser(withEmail: email, password: password, fullname: name)
+                    }
                 } label: {
                     HStack {
                         Text("SIGN UP")
@@ -50,12 +53,10 @@ struct RegistrationView: View {
                 .background(Color.blue)
                 .cornerRadius(10)
                 .padding(.top, 24)
-                
-                Spacer()
+                .padding(.bottom, 30)
                 
                 // sign up button
                 Button {
-                    appState.hideTabBar = false
                     dismiss()
                 } label: {
                     HStack(spacing: 3) {
@@ -66,11 +67,14 @@ struct RegistrationView: View {
                     .font(.system(size: 14))
                 }
                 
-                
+                Spacer()
             }
             .background(Color(red: 163/255, green: 162/255, blue: 158/255))
             .onAppear {
                 appState.hideTabBar = true
+            }
+            .onDisappear {
+                appState.hideTabBar = false
             }
         }
         .toolbar(.hidden, for: .tabBar)
