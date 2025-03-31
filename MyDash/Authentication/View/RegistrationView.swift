@@ -20,10 +20,11 @@ struct RegistrationView: View {
         NavigationStack {
             VStack {
                 // image
-                Image(.myDash)
+                Image(systemName: "flame.fill")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 200, height: 200)
+                    .frame(width: 100, height: 100)
+                    .foregroundColor(.pink)
                 
                 // sign in form
                 VStack(spacing: 24) {
@@ -50,13 +51,14 @@ struct RegistrationView: View {
                     .foregroundStyle(.white)
                     .frame(width: UIScreen.main.bounds.width - 32, height: 48)
                 }
-                .background(Color.blue)
+                .background(Color.pink)
                 .cornerRadius(10)
                 .padding(.top, 24)
                 .padding(.bottom, 30)
                 
                 // sign up button
                 Button {
+                    appState.hideTabBar = false
                     dismiss()
                 } label: {
                     HStack(spacing: 3) {
@@ -64,12 +66,13 @@ struct RegistrationView: View {
                         Text(" Sign In")
                             .fontWeight(.bold)
                     }
+                    .foregroundColor(.pink)
                     .font(.system(size: 14))
                 }
                 
                 Spacer()
             }
-            .background(Color(red: 163/255, green: 162/255, blue: 158/255))
+            .padding(.top, 60)
             .onAppear {
                 appState.hideTabBar = true
             }

@@ -12,11 +12,15 @@ import Appwrite
 class DocumentUploadViewModel: ObservableObject {
     private let storage = AppwriteManager.shared.storage
     @Published var uploadedImageURL: URL? = nil
-    private let bucketID = "67e93a79001bbff8cdd0"
+    private let bucketID = "67eae0f20013797e69fb"
     @EnvironmentObject var viewModel: AuthViewModel
+    @Published var images: [UIImage] = []
+    /// Store fetched image IDs to avoid refetching
+    private var fetchedImageIDs: Set<String> = []
     
     /// Uploads image to Appwrite using `InputFile`
     func uploadImage(_ image: UIImage, userId: String?) async throws {
+        /// check user has a login user ID
         guard let userId = userId else {
             return
         }
@@ -35,14 +39,15 @@ class DocumentUploadViewModel: ObservableObject {
             let file = InputFile.fromData(imageData, filename: filename, mimeType: "image/jpeg")
 
             /// Upload the file
-            let result = try await storage.createFile(
+            _ = try await storage.createFile(
                 bucketId: bucketID,
                 fileId: fileId,
                 file: file
             )
             
-            /// Fetch the image URL
-            await getFileURL(fileId: result.id)
+            print("Image uploaded successfully!")
+            
+            _ = try await getImages(userID: userId)
 
         } catch {
             print("Upload failed: \(error.localizedDescription)")
@@ -50,40 +55,36 @@ class DocumentUploadViewModel: ObservableObject {
     }
 
     func getImages(userID: String?) async throws -> [UIImage] {
-        guard let fieldID = userID else {
-            return []
-        }
-        
-        let fileList = try? await storage.listFiles(bucketId: bucketID)
-        
-        let matchingFiles = fileList?.files.filter { $0.name.contains(fieldID) } ?? []
-        
-        print("matching Files: \(matchingFiles)")
-        
-        var images: [UIImage] = []
-        
-        for file in matchingFiles {
-            if let byteBuffer = try? await storage.getFilePreview(bucketId: bucketID, fileId: file.id) {
-                let imageData = Data(byteBuffer.readableBytesView)
-                
-                if let image = UIImage(data: imageData) {
-                    images.append(image)
+        do {
+            guard let fieldID = userID else {
+                return []
+            }
+            
+            let fileList = try await storage.listFiles(bucketId: bucketID)
+            
+            // Filter only new images
+            let filteredFileList = fileList.files
+                .filter { $0.name.contains(fieldID) && !fetchedImageIDs.contains($0.id) }
+            
+            
+            for file in filteredFileList {
+                print("print \(file.id)")
+                if let byteBuffer = try? await storage.getFilePreview(bucketId: bucketID, fileId: file.id) {
+                    let imageData = Data(byteBuffer.readableBytesView)
+                    
+                    // Add only new image and its ID
+                    if let image = UIImage(data: imageData) {
+                        print("image: \(image)")
+                        images.append(image)
+                        fetchedImageIDs.insert(file.id)  // Track fetched image ID
+                    }
                 }
             }
-        }
-        
-        print(images)
-        
-        return images
-    }
-
-    
-    /// Fetches the image URL from Appwrite
-    func getFileURL(fileId: String) async {
-        let urlString = "https://cloud.appwrite.io/v1/storage/buckets/YOUR_BUCKET_ID/files/\(fileId)/view?project=YOUR_PROJECT_ID"
-
-        if let url = URL(string: urlString) {
-            self.uploadedImageURL = url
+            
+            return images
+        } catch {
+            print("Failed to get images: \(error)")
+            return []
         }
     }
 }

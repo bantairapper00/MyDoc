@@ -8,38 +8,45 @@
 import SwiftUI
 
 struct ImagePreviewView: View {
-    @State private var images: [UIImage] = []
     @ObservedObject var viewModel: DocumentUploadViewModel
     @EnvironmentObject var loginViewModel: AuthViewModel
     
     var body: some View {
-        ScrollView {
-            VStack {
-                if images.isEmpty {
-                    Text("No images found")
-                        .foregroundColor(.gray)
-                        .padding()
-                } else {
-                    ForEach(0..<images.count, id: \.self) { index in
-                        Image(uiImage: images[index])
+        VStack {
+            LazyVGrid(columns: Array(repeating: .init(.flexible()), count: 2), spacing: 16) {
+                ForEach(0..<viewModel.images.count, id: \.self) { index in
+                    VStack {
+                        Image(uiImage: viewModel.images[index])
                             .resizable()
                             .scaledToFit()
-                            .frame(height: 200)
-                            .cornerRadius(10)
-                            .padding()
+                            .frame(width: 100, height: 100)
+                        // Action menu button
+                        Button {
+                            print("Options for ")
+                        } label: {
+                            Image(systemName: "ellipsis")
+                                .foregroundColor(.gray)
+                                .padding(.top, 5)
+                        }
                     }
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(12)
+                    .shadow(radius: 2)
                 }
+                
             }
-            .onAppear {
-                Task {
-                    do {
-                        images = try await viewModel.getImages(userID: loginViewModel.currentUser?.id)
-                    } catch {
-                        print("Error loading images: \(error.localizedDescription)")
-                    }
+            .padding()
+        }
+        .onAppear {
+            Task {
+                do {
+                    viewModel.images = try await viewModel.getImages(userID: loginViewModel.currentUser?.id)
+                } catch {
+                    print("Error loading images: \(error.localizedDescription)")
                 }
             }
         }
+        
     }
 }
-

@@ -18,10 +18,11 @@ struct LoginView: View {
             GeometryReader {_ in 
                 VStack {
                     // image
-                    Image(.myDash)
+                    Image(systemName: "flame.fill")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 200, height: 200)
+                        .frame(width: 100, height: 100)
+                        .foregroundColor(.pink)
                     
                     // sign in form
                     VStack(spacing: 24) {
@@ -47,7 +48,7 @@ struct LoginView: View {
                         .foregroundStyle(.white)
                         .frame(width: UIScreen.main.bounds.width - 32, height: 48)
                     }
-                    .background(Color.blue)
+                    .background(Color.pink)
                     .cornerRadius(10)
                     .padding(.top, 2)
                     .padding(.bottom, 30)
@@ -63,12 +64,11 @@ struct LoginView: View {
                                 .fontWeight(.bold)
                         }
                         .font(.system(size: 14))
+                        .foregroundColor(.pink)
                     }
-                    
-                    Spacer()
                 }
-                .background(Color(red: 163/255, green: 162/255, blue: 158/255))
             }
+            .padding(.top, 60)
             .ignoresSafeArea(.keyboard)
         }
         

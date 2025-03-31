@@ -15,7 +15,7 @@ struct InputVIew: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text(title)
-                .foregroundStyle(Color(.darkGray))
+                .foregroundColor(.pink)
                 .fontWeight(.semibold)
                 .font(.footnote)
             if isSecureTextEntry {
@@ -29,6 +29,7 @@ struct InputVIew: View {
         }
         
         Divider()
+            .background(.pink)
     }
 }
 
