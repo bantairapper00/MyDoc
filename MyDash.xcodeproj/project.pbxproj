@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,7 +12,6 @@
 		18299F912D3C61210077F6C2 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18299F902D3C61210077F6C2 /* ShareSheet.swift */; };
 		18299F972D3C763B0077F6C2 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18299F962D3C763B0077F6C2 /* Categories.swift */; };
 		18299F992D3C7AE80077F6C2 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18299F982D3C7AE80077F6C2 /* CategoryListView.swift */; };
-		18299F9C2D3C9CE00077F6C2 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 18299F9B2D3C9CE00077F6C2 /* Data.json */; };
 		1831D9472D9473B7007D827F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1831D9462D9473B7007D827F /* GoogleService-Info.plist */; };
 		1831D94A2D94770A007D827F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1831D9492D94770A007D827F /* FirebaseAuth */; };
 		1831D94C2D94770A007D827F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1831D94B2D94770A007D827F /* FirebaseFirestore */; };
@@ -23,6 +22,8 @@
 		1851A1482D6B9F5E00BEE10E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851A1472D6B9F5E00BEE10E /* LoginView.swift */; };
 		1851A14A2D6BA93200BEE10E /* InputVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851A1492D6BA93200BEE10E /* InputVIew.swift */; };
 		1851A14E2D6BB7E200BEE10E /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851A14D2D6BB7E200BEE10E /* RegistrationView.swift */; };
+		185325E32DA718D00040F03F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185325E22DA718D00040F03F /* Preview Assets.xcassets */; };
+		185325E72DA7256C0040F03F /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 185325E62DA7256C0040F03F /* loading.json */; };
 		186297D32D99C4AC00B8166E /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186297D22D99C4AC00B8166E /* DocumentView.swift */; };
 		186297D52D99C4E400B8166E /* DocumentUploadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186297D42D99C4DA00B8166E /* DocumentUploadViewModel.swift */; };
 		186297D92D99C5C800B8166E /* Appwrite in Frameworks */ = {isa = PBXBuildFile; productRef = 186297D82D99C5C800B8166E /* Appwrite */; };
@@ -34,12 +35,31 @@
 		186E03D02D3B057900725CAA /* NewsPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186E03CF2D3B057900725CAA /* NewsPageModel.swift */; };
 		18940A792D39589E009C6717 /* MyDashApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18940A782D39589E009C6717 /* MyDashApp.swift */; };
 		18940A7D2D3958A4009C6717 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18940A7C2D3958A4009C6717 /* Assets.xcassets */; };
-		18940A802D3958A4009C6717 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18940A7F2D3958A4009C6717 /* Preview Assets.xcassets */; };
 		18940A872D3962EF009C6717 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18940A862D3962EF009C6717 /* TabBarView.swift */; };
 		18940A8A2D39646A009C6717 /* TabsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18940A892D39646A009C6717 /* TabsData.swift */; };
 		18940A8C2D398F74009C6717 /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18940A8B2D398F74009C6717 /* TabItemView.swift */; };
 		18B5E03D2D934AA40024F14C /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5E03C2D934A990024F14C /* AppState.swift */; };
+		18B833982DA6E4E8009458D8 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 18B833972DA6E4E8009458D8 /* Lottie */; };
+		18B833A12DA6EB2D009458D8 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B833A02DA6EB2D009458D8 /* LaunchView.swift */; };
+		18B833A52DA6F6E1009458D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B833A42DA6F6E1009458D8 /* LaunchScreen.storyboard */; };
+		18C20E872DA6DBDE009CB552 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 18C20E862DA6DBDE009CB552 /* Lottie */; };
+		18C20E892DA6E073009CB552 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C20E882DA6E073009CB552 /* LottieView.swift */; };
+		18C20E8D2DA6E296009CB552 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 18C20E8C2DA6E296009CB552 /* Lottie */; };
+		18C20E912DA6E2C3009CB552 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 18C20E902DA6E2C3009CB552 /* Lottie */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		18B8339C2DA6E537009458D8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		18299F8A2D3C101A0077F6C2 /* NewsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRowView.swift; sourceTree = "<group>"; };
@@ -48,7 +68,6 @@
 		18299F922D3C6F750077F6C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18299F962D3C763B0077F6C2 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		18299F982D3C7AE80077F6C2 /* CategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListView.swift; sourceTree = "<group>"; };
-		18299F9B2D3C9CE00077F6C2 /* Data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
 		1831D9462D9473B7007D827F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1831D94F2D94775D007D827F /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		183850142D6CEA3D00821939 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -56,6 +75,8 @@
 		1851A1472D6B9F5E00BEE10E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1851A1492D6BA93200BEE10E /* InputVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputVIew.swift; sourceTree = "<group>"; };
 		1851A14D2D6BB7E200BEE10E /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		185325E22DA718D00040F03F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		185325E62DA7256C0040F03F /* loading.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		186297D22D99C4AC00B8166E /* DocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
 		186297D42D99C4DA00B8166E /* DocumentUploadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentUploadViewModel.swift; sourceTree = "<group>"; };
 		186297DA2D99C61100B8166E /* AppwriteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppwriteManager.swift; sourceTree = "<group>"; };
@@ -67,11 +88,13 @@
 		18940A752D39589E009C6717 /* MyDash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18940A782D39589E009C6717 /* MyDashApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDashApp.swift; sourceTree = "<group>"; };
 		18940A7C2D3958A4009C6717 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		18940A7F2D3958A4009C6717 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		18940A862D3962EF009C6717 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		18940A892D39646A009C6717 /* TabsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsData.swift; sourceTree = "<group>"; };
 		18940A8B2D398F74009C6717 /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 		18B5E03C2D934A990024F14C /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		18B833A02DA6EB2D009458D8 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		18B833A42DA6F6E1009458D8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18C20E882DA6E073009CB552 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +102,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C20E872DA6DBDE009CB552 /* Lottie in Frameworks */,
 				186297D92D99C5C800B8166E /* Appwrite in Frameworks */,
 				1831D94A2D94770A007D827F /* FirebaseAuth in Frameworks */,
+				18B833982DA6E4E8009458D8 /* Lottie in Frameworks */,
 				1831D94C2D94770A007D827F /* FirebaseFirestore in Frameworks */,
 				1831D94E2D94770A007D827F /* FirebaseStorage in Frameworks */,
+				18C20E8D2DA6E296009CB552 /* Lottie in Frameworks */,
+				18C20E912DA6E2C3009CB552 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +122,7 @@
 				186E03CB2D3AE5D300725CAA /* NetworkManager.swift */,
 				18299F8E2D3C589E0077F6C2 /* SafariView.swift */,
 				18299F902D3C61210077F6C2 /* ShareSheet.swift */,
+				18C20E882DA6E073009CB552 /* LottieView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -228,16 +256,15 @@
 			isa = PBXGroup;
 			children = (
 				1831D9462D9473B7007D827F /* GoogleService-Info.plist */,
+				18B8339D2DA6EAF3009458D8 /* App */,
 				18299F922D3C6F750077F6C2 /* Info.plist */,
 				1851A1422D6B9EFC00BEE10E /* Authentication */,
 				186297CF2D9965BF00B8166E /* Storage */,
-				18299F9B2D3C9CE00077F6C2 /* Data.json */,
-				18940A782D39589E009C6717 /* MyDashApp.swift */,
-				18B5E03C2D934A990024F14C /* AppState.swift */,
 				18299F892D3BD23E0077F6C2 /* Common */,
 				186E03C72D3ACDF400725CAA /* News */,
 				18940A882D396450009C6717 /* TabBar */,
 				18940A7C2D3958A4009C6717 /* Assets.xcassets */,
+				185325E62DA7256C0040F03F /* loading.json */,
 				18940A7E2D3958A4009C6717 /* Preview Content */,
 			);
 			path = MyDash;
@@ -246,7 +273,7 @@
 		18940A7E2D3958A4009C6717 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				18940A7F2D3958A4009C6717 /* Preview Assets.xcassets */,
+				185325E22DA718D00040F03F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -261,6 +288,17 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		18B8339D2DA6EAF3009458D8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				18940A782D39589E009C6717 /* MyDashApp.swift */,
+				18B5E03C2D934A990024F14C /* AppState.swift */,
+				18B833A02DA6EB2D009458D8 /* LaunchView.swift */,
+				18B833A42DA6F6E1009458D8 /* LaunchScreen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -271,6 +309,7 @@
 				18940A712D39589E009C6717 /* Sources */,
 				18940A722D39589E009C6717 /* Frameworks */,
 				18940A732D39589E009C6717 /* Resources */,
+				18B8339C2DA6E537009458D8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -297,7 +336,6 @@
 				};
 			};
 			buildConfigurationList = 18940A702D39589E009C6717 /* Build configuration list for PBXProject "MyDash" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -308,7 +346,9 @@
 			packageReferences = (
 				1831D9482D94770A007D827F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				186297D72D99C5C800B8166E /* XCRemoteSwiftPackageReference "sdk-for-apple" */,
+				18B833962DA6E4E8009458D8 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
+			preferredProjectObjectVersion = 77;
 			productRefGroup = 18940A762D39589E009C6717 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -323,10 +363,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18940A802D3958A4009C6717 /* Preview Assets.xcassets in Resources */,
+				185325E32DA718D00040F03F /* Preview Assets.xcassets in Resources */,
 				1831D9472D9473B7007D827F /* GoogleService-Info.plist in Resources */,
+				18B833A52DA6F6E1009458D8 /* LaunchScreen.storyboard in Resources */,
+				185325E72DA7256C0040F03F /* loading.json in Resources */,
 				18940A7D2D3958A4009C6717 /* Assets.xcassets in Resources */,
-				18299F9C2D3C9CE00077F6C2 /* Data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,8 +378,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B833A12DA6EB2D009458D8 /* LaunchView.swift in Sources */,
 				1831D9502D947767007D827F /* AuthViewModel.swift in Sources */,
 				186297DD2D99E1BC00B8166E /* ImagePreviewView.swift in Sources */,
+				18C20E892DA6E073009CB552 /* LottieView.swift in Sources */,
 				18299F8B2D3C101A0077F6C2 /* NewsRowView.swift in Sources */,
 				18299F972D3C763B0077F6C2 /* Categories.swift in Sources */,
 				18B5E03D2D934AA40024F14C /* AppState.swift in Sources */,
@@ -491,6 +534,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyDash/Preview Content\"";
@@ -501,8 +545,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -522,6 +568,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyDash/Preview Content\"";
@@ -532,8 +579,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -588,6 +637,22 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		18B833962DA6E4E8009458D8 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.1;
+			};
+		};
+		18C20E852DA6DBDE009CB552 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -610,6 +675,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 186297D72D99C5C800B8166E /* XCRemoteSwiftPackageReference "sdk-for-apple" */;
 			productName = Appwrite;
+		};
+		18B833972DA6E4E8009458D8 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18B833962DA6E4E8009458D8 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		18C20E862DA6DBDE009CB552 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18C20E852DA6DBDE009CB552 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		18C20E8C2DA6E296009CB552 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18C20E852DA6DBDE009CB552 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		18C20E902DA6E2C3009CB552 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18C20E852DA6DBDE009CB552 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

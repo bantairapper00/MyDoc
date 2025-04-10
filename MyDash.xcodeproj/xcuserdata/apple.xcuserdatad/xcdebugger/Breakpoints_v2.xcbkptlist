@@ -66,64 +66,6 @@
             endingLineNumber = "38"
             landmarkName = "uploadImage(_:userId:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "9C6F071D-B8F9-40A2-8BD4-ABC8C4E06160 - 176da5d76f76df7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for MyDash.DocumentUploadViewModel.uploadImage(_: __C.UIImage, userId: Swift.Optional&lt;Swift.String&gt;) async throws -&gt; ()"
-                  moduleName = "MyDash.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/MyDash/MyDash/Storage/ViewModel/DocumentUploadViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38">
-               </Location>
-               <Location
-                  uuid = "9C6F071D-B8F9-40A2-8BD4-ABC8C4E06160 - 184d5c3f9547bcf5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for MyDash.DocumentUploadViewModel.uploadImage(_: __C.UIImage, userId: Swift.Optional&lt;Swift.String&gt;) async throws -&gt; ()"
-                  moduleName = "MyDash.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/MyDash/MyDash/Storage/ViewModel/DocumentUploadViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38">
-               </Location>
-               <Location
-                  uuid = "9C6F071D-B8F9-40A2-8BD4-ABC8C4E06160 - 4648a85ee0cca1f5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for MyDash.DocumentUploadViewModel.uploadImage(_: __C.UIImage, userId: Swift.Optional&lt;Swift.String&gt;) async throws -&gt; ()"
-                  moduleName = "MyDash.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/MyDash/MyDash/Storage/ViewModel/DocumentUploadViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38">
-               </Location>
-               <Location
-                  uuid = "9C6F071D-B8F9-40A2-8BD4-ABC8C4E06160 - 79305f45c19647c8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(6) suspend resume partial function for MyDash.DocumentUploadViewModel.uploadImage(_: __C.UIImage, userId: Swift.Optional&lt;Swift.String&gt;) async throws -&gt; ()"
-                  moduleName = "MyDash.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/MyDash/MyDash/Storage/ViewModel/DocumentUploadViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -140,64 +82,6 @@
             endingLineNumber = "36"
             landmarkName = "body"
             landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "5FD85D60-946A-4649-8F17-148E529550A1 - a68bd1827300de06"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for closure #1 () async -&gt; () in closure #2 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in MyDash.ImagePreviewView.body.getter : some"
-                  moduleName = "MyDash.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/MyDash/MyDash/Storage/View/ImagePreviewView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36">
-               </Location>
-               <Location
-                  uuid = "5FD85D60-946A-4649-8F17-148E529550A1 - d95c4c9dcc1b8c0c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for closure #1 () async -&gt; () in closure #2 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in MyDash.ImagePreviewView.body.getter : some"
-                  moduleName = "MyDash.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/MyDash/MyDash/Storage/View/ImagePreviewView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36">
-               </Location>
-               <Location
-                  uuid = "5FD85D60-946A-4649-8F17-148E529550A1 - 5c722605d6679238"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 () async -&gt; () in closure #2 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in MyDash.ImagePreviewView.body.getter : some"
-                  moduleName = "MyDash.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/MyDash/MyDash/Storage/View/ImagePreviewView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36">
-               </Location>
-               <Location
-                  uuid = "5FD85D60-946A-4649-8F17-148E529550A1 - 71793e446bdaf43b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for closure #1 () async -&gt; () in closure #2 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in MyDash.ImagePreviewView.body.getter : some"
-                  moduleName = "MyDash.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/MyDash/MyDash/Storage/View/ImagePreviewView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

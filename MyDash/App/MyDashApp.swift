@@ -19,10 +19,11 @@ struct MyDashApp: App {
     
     var body: some Scene {
         WindowGroup {
-            TabBarView()
+            LaunchView()
                 .environmentObject(appState)
                 .environmentObject(authViewModel)
                 .background(Color.gray.opacity(0.01))
+            
         }
     }
 }
